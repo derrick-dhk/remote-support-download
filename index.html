@@ -1,77 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Remote Support Download</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+  <meta charset="UTF-8" />
+  <title>Remote Support & Security Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+    }
 
-        .container {
-            background: #111827;
-            padding: 40px;
-            border-radius: 12px;
-            text-align: center;
-            width: 90%;
-            max-width: 450px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-        }
+    .container {
+      background: #111827;
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+      width: 90%;
+      max-width: 520px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
 
-        h1 {
-            margin-bottom: 10px;
-            font-size: 24px;
-        }
+    h1 {
+      margin: 0 0 10px 0;
+      font-size: 24px;
+    }
 
-        p {
-            font-size: 14px;
-            opacity: 0.8;
-            margin-bottom: 30px;
-        }
+    p {
+      font-size: 14px;
+      opacity: 0.85;
+      margin: 0 0 26px 0;
+      line-height: 1.4;
+    }
 
-        .download-btn {
-            display: inline-block;
-            padding: 15px 25px;
-            font-size: 16px;
-            font-weight: bold;
-            text-decoration: none;
-            color: white;
-            background: #2563eb;
-            border-radius: 8px;
-            transition: 0.3s ease;
-        }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 15px 18px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      border-radius: 10px;
+      transition: 0.25s ease;
+      box-sizing: border-box;
+      margin: 0 auto;
+      user-select: none;
+    }
 
-        .download-btn:hover {
-            background: #1d4ed8;
-        }
+    .btn + .btn {
+      margin-top: 12px;
+    }
 
-        .note {
-            margin-top: 20px;
-            font-size: 12px;
-            opacity: 0.6;
-        }
-    </style>
+    .btn-support {
+      background: #2563eb;
+    }
+    .btn-support:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-security {
+      background: #16a34a;
+    }
+    .btn-security:hover {
+      background: #15803d;
+    }
+
+    .note {
+      margin-top: 18px;
+      font-size: 12px;
+      opacity: 0.65;
+      line-height: 1.4;
+    }
+
+    .small {
+      margin-top: 10px;
+      font-size: 12px;
+      opacity: 0.6;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Remote Support Tool</h1>
-        <p>Click the button below to download and install the remote support agent.</p>
+  <div class="container">
+    <h1>Tools Download</h1>
+    <p>Use the buttons below to download and install the required tools on your computer.</p>
 
-        <a class="download-btn" href="https://portal.console.gotoresolve.com/installer-landing-page/5246701701752841383?dataResidency=global&groupId=74db6720-c6ab-4835-9331-7c83a798d562#53f24868b63c2a0e25277502d867e74c324fabd1e18fe33c46d75e6e18a252bb">
-            Download Support Agent
-        </a>
+    <!-- Resolve / ScreenConnect / ConnectWise Control -->
+    <a class="btn btn-support" href="https://portal.console.gotoresolve.com/installer-landing-page/5246701701752841383?dataResidency=global&groupId=74db6720-c6ab-4835-9331-7c83a798d562#53f24868b63c2a0e25277502d867e74c324fabd1e18fe33c46d75e6e18a252bb">
+      Download Remote Support Agent
+    </a>
 
-        <div class="note">
-            If prompted, click "Run" and allow installation.
-        </div>
+    <!-- Bitdefender GravityZone -->
+    <a class="btn btn-security" href="https://cloud.gravityzone.bitdefender.com/Packages/BSTWIN/0/setupdownloader_[aHR0cHM6Ly9jbG91ZC1lY3MuZ3Jhdml0eXpvbmUuYml0ZGVmZW5kZXIuY29tL1BhY2thZ2VzL0JTVFdJTi8wLzMxeWQyVC9pbnN0YWxsZXIueG1sP2xhbmc9ZW4tVVM=].exe">
+      Download Bitdefender Security Agent
+    </a>
+
+    <div class="note">
+      Windows: If prompted, click <b>Run</b>. If installation fails, right-click the installer and choose <b>Run as administrator</b>.
+      <div class="small">If you have any issues, contact support.</div>
     </div>
+  </div>
 </body>
 </html>
