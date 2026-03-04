@@ -13,7 +13,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       padding: 20px;
       box-sizing: border-box;
     }
@@ -66,11 +66,27 @@
       background: #1d4ed8;
     }
 
-    .btn-security {
+    .btn-security-windows {
       background: #16a34a;
     }
-    .btn-security:hover {
+    .btn-security-windows:hover {
       background: #15803d;
+    }
+
+    .btn-security-mac {
+      background: #22c55e;
+    }
+    .btn-security-mac:hover {
+      background: #16a34a;
+    }
+
+    .btn-security-linux {
+      background: #f59e0b;
+      color: #111827;
+    }
+    .btn-security-linux:hover {
+      background: #d97706;
+      color: #111827;
     }
 
     .note {
@@ -78,12 +94,20 @@
       font-size: 12px;
       opacity: 0.65;
       line-height: 1.4;
+      text-align: left;
     }
 
     .small {
       margin-top: 10px;
       font-size: 12px;
-      opacity: 0.6;
+      opacity: 0.75;
+      text-align: center;
+    }
+
+    code {
+      background: rgba(255,255,255,0.08);
+      padding: 2px 6px;
+      border-radius: 6px;
     }
   </style>
 </head>
@@ -93,17 +117,29 @@
     <p>Use the buttons below to download and install the required tools on your computer.</p>
 
     <!-- Resolve / ScreenConnect / ConnectWise Control -->
-    <a class="btn btn-support" href="Link_Here">
+    <a class="btn btn-support" href="Link_Here" target="_blank" rel="noopener noreferrer">
       Download Remote Support Agent
     </a>
 
-    <!-- Bitdefender GravityZone -->
-    <a class="btn btn-security" href="https://cloud.gravityzone.bitdefender.com/Packages/BSTWIN/0/setupdownloader_[aHR0cHM6Ly9jbG91ZC1lY3MuZ3Jhdml0eXpvbmUuYml0ZGVmZW5kZXIuY29tL1BhY2thZ2VzL0JTVFdJTi8wL1N2ZzNBWS9pbnN0YWxsZXIueG1sP2xhbmc9ZW4tVVM=].exe">
-      Download Bitdefender Security Agent
+    <!-- Bitdefender GravityZone (Windows) -->
+    <a class="btn btn-security-windows" href="https://cloud.gravityzone.bitdefender.com/Packages/BSTWIN/0/setupdownloader_[aHR0cHM6Ly9jbG91ZC1lY3MuZ3Jhdml0eXpvbmUuYml0ZGVmZW5kZXIuY29tL1BhY2thZ2VzL0JTVFdJTi8wL1N2ZzNBWS9pbnN0YWxsZXIueG1sP2xhbmc9ZW4tVVM=].exe" target="_blank" rel="noopener noreferrer">
+      Download Bitdefender Security Agent (Windows)
+    </a>
+
+    <!-- Bitdefender GravityZone (Mac) -->
+    <a class="btn btn-security-mac" href="https://cloud.gravityzone.bitdefender.com/Packages/MAC/0/Svg3AY/setup_downloader.dmg" target="_blank" rel="noopener noreferrer">
+      Download Bitdefender Security Agent (Mac)
+    </a>
+
+    <!-- Bitdefender GravityZone (Linux) -->
+    <a class="btn btn-security-linux" href="https://cloud.gravityzone.bitdefender.com/Packages/NIX/0/Svg3AY/setup_downloader.tar" target="_blank" rel="noopener noreferrer">
+      Download Bitdefender Security Agent (Linux)
     </a>
 
     <div class="note">
-      Windows: If prompted, click <b>Run</b>. If installation fails, right-click the installer and choose <b>Run as administrator</b>.
+      <b>Windows:</b> If prompted, click <b>Run</b>. If installation fails, right-click the installer and choose <b>Run as administrator</b>.<br /><br />
+      <b>Mac:</b> Open the downloaded <code>.pkg</code> and follow prompts. You may need to allow it in <b>System Settings → Privacy &amp; Security</b>.<br /><br />
+      <b>Linux:</b> Download and follow the install instructions provided by your IT team (often a script or package install).
       <div class="small">If you have any issues, contact support.</div>
     </div>
   </div>
